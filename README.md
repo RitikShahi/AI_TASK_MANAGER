@@ -59,8 +59,8 @@ An intelligent task management application that leverages Google Gemini AI to ge
 - **Google Gemini AI** - Task generation
 
 ### Deployment
-- **Netlify** - Frontend hosting
-- **Render.com** - Backend and database hosting
+- **Netlify** - ai-task-manager1.netlify.app
+- **Render.com** -https://ai-task-manager-4.onrender.com
 
 ## 🚀 Getting Started
 
@@ -120,14 +120,14 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 🚀 Deployment
 
-### Frontend (Netlify-ai-task-manager1.netlify.app)
+### Frontend (Netlify)
 
 1. **Build Configuration:**
 
 2. **Environment Variables:**
 Set all `NEXT_PUBLIC_*` variables in Netlify dashboard
 
-### Backend (Render.com-https://ai-task-manager-4.onrender.com)
+### Backend (Render.com-)
 
 1. **Create PostgreSQL Database** on Render
 2. **Deploy as Web Service:**
