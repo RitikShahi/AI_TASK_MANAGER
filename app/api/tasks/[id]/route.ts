@@ -35,7 +35,7 @@ export async function PUT(
         priority,
         updatedAt: new Date(),
       })
-      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id)))
+      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id))) // ✅ Fixed
       .returning();
 
     if (!updatedTask.length) {
@@ -74,7 +74,7 @@ export async function DELETE(
     // Delete task
     const deletedTask = await db
       .delete(tasks)
-      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id)))
+      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id))) // ✅ Already correct
       .returning();
 
     if (!deletedTask.length) {
