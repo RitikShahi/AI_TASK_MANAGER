@@ -5,9 +5,10 @@ import { eq, and } from 'drizzle-orm';
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const { firebaseUid, isCompleted, title, description, priority } = await request.json();
     
     if (!firebaseUid) {
@@ -35,7 +36,7 @@ export async function PUT(
         priority,
         updatedAt: new Date(),
       })
-      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id))) // ✅ Fixed
+      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id)))
       .returning();
 
     if (!updatedTask.length) {
@@ -51,9 +52,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
+    const params = await context.params;
     const { firebaseUid } = await request.json();
     
     if (!firebaseUid) {
@@ -74,7 +76,7 @@ export async function DELETE(
     // Delete task
     const deletedTask = await db
       .delete(tasks)
-      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id))) // ✅ Already correct
+      .where(and(eq(tasks.id, parseInt(params.id)), eq(tasks.userId, user[0].id)))
       .returning();
 
     if (!deletedTask.length) {
