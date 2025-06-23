@@ -59,7 +59,7 @@ An intelligent task management application that leverages Google Gemini AI to ge
 - **Google Gemini AI** - Task generation
 
 ### Deployment
-- **Netlify** - ai-task-manager1.netlify.app
+- **Netlify** - [ai-task-manager1.netlify.app](https://ai-task-manager4.netlify.app/)
 - **Render.com** -https://ai-task-manager-4.onrender.com
 
 ## 🚀 Getting Started
