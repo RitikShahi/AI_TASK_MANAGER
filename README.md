@@ -120,14 +120,14 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 🚀 Deployment
 
-### Frontend (Netlify)
+### Frontend (Netlify-ai-task-manager1.netlify.app)
 
 1. **Build Configuration:**
 
 2. **Environment Variables:**
 Set all `NEXT_PUBLIC_*` variables in Netlify dashboard
 
-### Backend (Render.com)
+### Backend (Render.com-https://ai-task-manager-4.onrender.com)
 
 1. **Create PostgreSQL Database** on Render
 2. **Deploy as Web Service:**
