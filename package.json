@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg",
+    "db:push:pg": "drizzle-kit push:pg",
+    "db:migrate": "drizzle-kit migrate:pg",
+    "db:studio": "drizzle-kit studio",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
